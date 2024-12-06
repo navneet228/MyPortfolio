@@ -202,6 +202,7 @@ a:focus {
     .navbar-light.nav-sticky .navbar-nav .nav-link,
     .navbar-light.nav-sticky .navbar-nav .nav-link:focus {
         color: #414141;
+        
     }
 
     .navbar-light .navbar-nav .nav-link:hover,
@@ -212,6 +213,7 @@ a:focus {
     .navbar-light.nav-sticky .navbar-nav .nav-link:hover,
     .navbar-light.nav-sticky .navbar-nav .nav-link.active {
         color: #EF233C;
+        
     }
 }
 
@@ -598,39 +600,6 @@ a:focus {
     padding: 45px 0 15px 0;
 }
 
-.portfolio #portfolio-filter {
-    padding: 0;
-    margin: -15px 0 25px 0;
-    list-style: none;
-    font-size: 0;
-    text-align: center;
-}
-
-.portfolio #portfolio-filter li {
-    cursor: pointer;
-    display: inline-block;
-    margin: 5px;
-    padding: 6px 12px;
-    font-size: 14px;
-    font-weight: 600;
-    color: #ffffff;
-    background: #EF233C;
-    border: 2px solid transparent;
-    border-radius: 0;
-    box-shadow: inset 0 0 0 50px #EF233C;
-    transition: ease-out 0.3s;
-    -webkit-transition: ease-out 0.3s;
-    -moz-transition: ease-out 0.3s;
-}
-
-.portfolio #portfolio-filter li:hover,
-.portfolio #portfolio-filter li.filter-active {
-    color: #EF233C;
-    background: transparent;
-    box-shadow: inset 0 0 0 0 #EF233C;
-    border-color: #EF233C;
-}
-
 .portfolio .portfolio-item {
     position: relative;
 }
@@ -638,63 +607,72 @@ a:focus {
 .portfolio .portfolio-wrap {
     position: relative;
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    height: 300px; 
+    transition: transform 0.3s, box-shadow 0.3s;
+    margin-bottom: 30px;
 }
 
-.portfolio .portfolio-img {
-    position: relative;
-    overflow: hidden;
-}
-
-.portfolio .portfolio-img img {
-    position: relative;
-    width: 100%; 
-    height: 100%; 
-    object-fit: cover;
-    transform: scale(1.1);
-    transition: .5s;
-}
-
-.portfolio .portfolio-item:hover img {
-    margin-left: 15px;
+.portfolio .portfolio-wrap:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    
 }
 
 .portfolio .portfolio-text {
-    position: relative;
-    height: 60px;
-    width: calc(100% - 30px);
-    margin: -30px 15px 30px 15px;
-    display: flex;
-    align-items: center;
-    background: #ffffff;
-    box-shadow: 0 0 15px rgba(0, 0, 0, .12);
+    text-align: center;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    border-radius: 5px;
 }
 
 .portfolio .portfolio-text h3 {
-    width: calc(100% - 70px);
-    font-size: 18px;
-    font-weight: 600;
-    margin: 0 0 0 15px;
-    white-space: nowrap;
-    overflow: hidden;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
 }
 
-.portfolio .portfolio-text a.btn {
-    width: 50px;
-    height: 50px;
-    padding: 0 0 2px 1px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 45px;
-    font-weight: 100;
+.portfolio .portfolio-text p {
+    font-size: 16px;
+    margin: 0;
+    color: #555;
 }
 
-.portfolio .portfolio-item:hover a.btn {
+.portfolio .portfolio-text a {
     color: #EF233C;
-    background: transparent;
-    box-shadow: inset 0 0 0 0 #EF233C;
-    border-color: #EF233C;
+    text-decoration: none;
+    font-weight: 600;
 }
+
+.portfolio .portfolio-text a:hover {
+    text-decoration: underline;
+}
+
+.project-1 {
+    background-image: url('https://img.freepik.com/free-photo/shopping-bag-cart_23-2148879372.jpg');
+}
+
+.project-2 {
+    background-image: url('https://cdn.prod.website-files.com/60414b21f1ffcdbb0d5ad688/65bd3f2ed08408ced197152d_restaurant-terms.jpg');
+}
+
+.project-3 {
+    background-image: url('https://static.vecteezy.com/system/resources/thumbnails/010/243/352/small/blue-and-pink-chatting-box-speak-bubble-text-message-box-text-box-cartoon-illustration-design-communication-concept-photo.jpg');
+}
+
+.project-4 {
+    background-image: url('https://thetrustsarena.co.nz/wp-content/uploads/2022/02/Community.jpg');
+}
+
 
 
 /*******************************/
@@ -708,8 +686,8 @@ a:focus {
 }
 
 .contact .container-fluid {
-    background: url(../img/contact.jpg) left center no-repeat;
     background-size: contain;
+    text-align: center;
 }
 
 .contact .contact-form {
@@ -780,81 +758,6 @@ a:focus {
     }
 }
 
-
-/*******************************/
-/*********** Blog CSS **********/
-/*******************************/
-.blog {
-    position: relative;
-    width: 100%;
-    padding: 45px 0 15px 0;
-}
-
-.blog .blog-item {
-    position: relative;
-    margin-bottom: 30px;
-}
-
-.blog .blog-img {
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-}
-
-.blog .blog-img img {
-    width: 100%;
-    transition: .5s;
-}
-
-.blog .blog-item:hover img {
-    transform: scale(1.1);
-}
-
-.blog .blog-text {
-    position: relative;
-    padding: 30px;
-    border-right: 1px solid rgba(0, 0, 0, .07);
-    border-bottom: 1px solid rgba(0, 0, 0, .07);
-    border-left: 1px solid rgba(0, 0, 0, .07);
-}
-
-.blog .blog-text h2 {
-    font-size: 25px;
-    font-weight: 600;
-}
-
-.blog .blog-text p {
-    margin-bottom: 10px;
-}
-
-.blog .blog-item a.btn {
-    margin-top: 10px;
-    padding: 8px 15px;
-}
-
-.blog .blog-item a.btn i {
-    margin-left: 5px;
-}
-
-.blog .blog-meta {
-    position: relative;
-    display: flex;
-    margin-bottom: 15px;
-}
-
-.blog .blog-meta p {
-    margin: 0 10px 0 0;
-    font-size: 13px;
-}
-
-.blog .blog-meta i {
-    color: #414141;
-    margin-right: 5px;
-}
-
-.blog .blog-meta p:last-child {
-    margin: 0;
-}
 
 
 /*******************************/
